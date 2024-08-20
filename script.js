@@ -65,6 +65,7 @@ document.getElementById('start-camera').addEventListener('click', function() {
             videoContainer.classList.add('hidden');
             captureButton.classList.add('hidden');
             abbruchButton.classList.add('hidden');
+            anleitung.classList.add('hidden');
         });
     } else {
         // Notify the user if their browser doesn't support the API

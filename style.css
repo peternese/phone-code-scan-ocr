@@ -1,10 +1,19 @@
 .form-scanner {
     text-align: center;
 }
+button {
+    background-color: white;
+}
 body {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #b1b1b1;
+    background-image: linear-gradient(27deg, #b1b1b1 0%, #eeeeee 64%);
+                        
     font-family: 'Helvetica Neue', Arial, sans-serif;
     text-align: center;
     margin-top: 50px; /* Add top margin to move content down */
+    height: 100vh;
 }
 .camera-icon {
     width: 20px; /* Adjust the size as needed */
@@ -20,8 +29,23 @@ body {
     border-radius: 0px 10px 10px 0px !important;
     border: none; /* Remove border to align with input field */
 }
+ul {
+    padding-inline-start: 20px !important;
+}
+.footer {
+    font-family: 'Courier New', monospace;
+    position:absolute;
+    bottom: 0px;
+    right: 0px;
+    margin: 5px 10px 5px 5px;
+    font-size: 10px;
+}
+a {
+    color: white;
+    text-decoration: none;
+}
 .anleitung {
-    color: lightgrey;
+    color: rgb(126, 126, 126);
     padding: 0px 30px 10px 30px;
 }
 button {
