@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <title>Phone Code Scanner</title>
+</head>
+<body>
+<sup id="info-icon" style="cursor: pointer;"><img src="info-icon.svg" alt="info" class="info-icon"></sup>
+<div class="headline">
+    <h1>Phone Camera<br> Code Scanner</h1>
+</div>
+<div class="scanner">
+    <form class="form-scanner">
+        <label>
+            Code
+        </label><br>
+        <div><input class="codeinput" type="text" id="code" name="code" placeholder="hier code eingeben"><button type="button" id="start-camera"> <img src="camera-icon.svg" alt="Camera" class="camera-icon"></button></div>       
+        <button type="button" id="check-code" class="confirmbuttons">Code überprüfen</button>
+        <div id="validation-message"></div>
+    </form>
+</div>
+<div id="video-container" class="hidden">
+    <div class="overlay">
+        <video id="video" autoplay muted playsinline></video>
+        <div class="mask"></div>
+        <div class="rectangle"></div>
+    </div>
+</div>
+<!-- Move the capture button outside of the video container -->
+<button id="capture-button" class="hidden confirmbuttons">Foto schießen</button><br>
+<button id="abbruch" class="hidden confirmbuttons">Abbruch</button>
+<canvas id="canvas" class="hidden"></canvas>
+<!-- Modal structure -->
+<div id="info-modal" class="modal hidden">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Info</h2>
+        <div class="modal-text">In diesem Projekt wurde die OCR.space API angebunden. Die Herausforderung war es, die Geräte-Kamera einzubinden, einen definierten Bereich im Kamera-Stream als Rechteck zu definieren und diesen auch explizit zu erfassen. <br> <br> Es wird ein 9-stelliger Code erwartet. Erlaubt sind Buchstaben von A-Z und Zahlen von 1-9. Der Code kann in beiden Formaten "XXX XXX XXX" oder "XXXXXXXXX" eingegeben werden.</div>
+    </div>
+</div>
+</body>
+</html>

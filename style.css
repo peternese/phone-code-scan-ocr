@@ -1,0 +1,154 @@
+.form-scanner {
+    text-align: center;
+}
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    text-align: center;
+    margin-top: 50px; /* Add top margin to move content down */
+}
+.camera-icon {
+    width: 20px; /* Adjust the size as needed */
+    height: 20px; /* Adjust the size as needed */
+    vertical-align: middle; /* Align the icon with the text */
+}
+#start-camera {
+    position:relative;
+    top: -2.5px;
+    height: 43px;
+    padding: 7px 10px 6px 5px; /* Remove padding to fit the SVG better */
+    margin: 0px !important;
+    border-radius: 0px 10px 10px 0px !important;
+    border: none; /* Remove border to align with input field */
+}
+button {
+    border-radius: 20px;
+    border: none;
+    padding: 10px;
+    margin: 10px;
+}
+.codeinput {
+    padding: 10px 0px 10px 0px;
+    text-align: center;
+    margin: 5px 0px 5px 5px;
+    border-radius: 5px 0px 0px 5px;
+    caret-color: grey;
+    font-size: 16px;
+    font-weight: 700;
+}
+.codeinput:focus {
+    box-shadow: 0 0 5px grey;
+    border-color: grey;
+    outline: none;
+    color: grey;
+    caret-color:grey;
+}
+#video-container {
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    width: 300px; /* Adjust width as needed */
+    height: 200px; /* Adjust height as needed */
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 0 auto; /* Center the video container horizontally */
+}
+#video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.overlay {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+}
+.rectangle {
+    position: absolute;
+    width: 70%;
+    height: 30%;
+    top: 35%; /* Center the rectangle vertically */
+    left: 15%; /* Center the rectangle horizontally */
+    border: 2px solid white;
+    box-sizing: border-box;
+}
+#capture-button {
+    margin-top: 10px;
+}
+.hidden {
+    display: none;
+}
+#validation-message {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+.invalid {
+    color: red;
+}
+.valid {
+    color: green;
+}
+
+/* Modal styles */
+.info-icon {
+    position: absolute;
+    right: 30px;
+    top: 20px;
+    height: 30px;
+    width: 30px;
+}
+#abbruch {
+    margin-top:5px;
+}
+.confirmbuttons {
+    color: black;
+    font-weight: 700;
+    padding: 10px 20px;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 0px 20px 40px 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    max-width: 500px;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
