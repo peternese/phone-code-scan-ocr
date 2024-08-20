@@ -7,11 +7,13 @@ document.getElementById('start-camera').addEventListener('click', function() {
     const videoContainer = document.getElementById('video-container');
     const captureButton = document.getElementById('capture-button');
     const abbruchButton = document.getElementById('abbruch');
+    const anleitung = document.getElementById('anleitung');
     const scanner = document.querySelector('.scanner');
 
     // Hide the scanner class and show the video container and capture button
     scanner.classList.add('hidden');
     videoContainer.classList.remove('hidden');
+    anleitung.classList.remove('hidden');
     captureButton.classList.remove('hidden');
     abbruchButton.classList.remove('hidden');
 
@@ -81,6 +83,7 @@ document.getElementById('abbruch').addEventListener('click', function() {
     const videoContainer = document.getElementById('video-container');
     const captureButton = document.getElementById('capture-button');
     const abbruchButton = document.getElementById('abbruch');
+    const anleitung = document.getElementById('anleitung');
     const scanner = document.querySelector('.scanner');
 
     // Stop the video stream
@@ -94,6 +97,7 @@ document.getElementById('abbruch').addEventListener('click', function() {
     videoContainer.classList.add('hidden');
     captureButton.classList.add('hidden');
     abbruchButton.classList.add('hidden');
+    anleitung.classList.add('hidden');
 
     // Show the scanner again
     scanner.classList.remove('hidden');
@@ -107,6 +111,7 @@ document.getElementById('capture-button').addEventListener('click', function() {
     const videoContainer = document.getElementById('video-container');
     const captureButton = document.getElementById('capture-button');
     const abbruchButton = document.getElementById('abbruch');
+    const anleitung = document.getElementById('anleitung');
     const scanner = document.querySelector('.scanner');
     
 
@@ -172,6 +177,7 @@ document.getElementById('capture-button').addEventListener('click', function() {
         videoContainer.classList.add('hidden');
         captureButton.classList.add('hidden');
         abbruchButton.classList.add('hidden');
+        anleitung.classList.add('hidden');
         scanner.classList.remove('hidden');
         // Simulate a click on the #check-code button
         document.getElementById('check-code').click(); 
