@@ -149,7 +149,9 @@ button {
 }
 
 .modal {
-    display: none; /* Hidden by default */
+    display: block; /* Keep it in the document flow */
+    opacity: 0; /* Start fully transparent */
+    visibility: hidden; /* Hide the modal visually */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
     left: 0;
@@ -158,6 +160,12 @@ button {
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
     background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+    transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out; /* Smooth transition */
+}
+
+.modal.show {
+    opacity: 1; /* Fully visible */
+    visibility: visible; /* Make it visible */
 }
 
 .modal-content {

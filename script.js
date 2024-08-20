@@ -211,21 +211,20 @@ const closeModal = document.querySelector('.modal .close');
 
 // When the user clicks on the info icon, open the modal
 infoIcon.addEventListener('click', function() {
-    modal.style.display = 'block';
+    modal.classList.add('show');
 });
 
 // When the user clicks on the close (x), close the modal
 closeModal.addEventListener('click', function() {
-    modal.style.display = 'none';
+    modal.classList.remove('show');
 });
 
 // When the user clicks anywhere outside of the modal, close it
 window.addEventListener('click', function(event) {
     if (event.target == modal) {
-        modal.style.display = 'none';
+        modal.classList.remove('show');
     }
 });
-
 
 //Throw Alert for non mobile users
 document.addEventListener('DOMContentLoaded', function() {
