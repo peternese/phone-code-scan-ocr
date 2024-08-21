@@ -2,16 +2,6 @@ function isMobileDevice() {
     return /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
 }
 
-const video = document.getElementById('video');
-const canvas = document.getElementById('canvas');
-const rectangle = document.querySelector('.rectangle');
-const codeInput = document.getElementById('code');
-const videoContainer = document.getElementById('video-container');
-const captureButton = document.getElementById('capture-button');
-const abbruchButton = document.getElementById('abbruch');
-const anleitung = document.getElementById('anleitung');
-const scanner = document.querySelector('.scanner');
-
 document.getElementById('start-camera').addEventListener('click', function() {
     const video = document.getElementById('video');
     const videoContainer = document.getElementById('video-container');
@@ -115,6 +105,17 @@ document.getElementById('abbruch').addEventListener('click', function() {
 });
 
 document.getElementById('capture-button').addEventListener('click', function() {
+    const video = document.getElementById('video');
+    const canvas = document.getElementById('canvas');
+    const rectangle = document.querySelector('.rectangle');
+    const codeInput = document.getElementById('code');
+    const videoContainer = document.getElementById('video-container');
+    const captureButton = document.getElementById('capture-button');
+    const abbruchButton = document.getElementById('abbruch');
+    const anleitung = document.getElementById('anleitung');
+    const scanner = document.querySelector('.scanner');
+    
+
     const videoRect = video.getBoundingClientRect();
     const rectRect = rectangle.getBoundingClientRect();
 
@@ -210,22 +211,12 @@ const closeModal = document.querySelector('.modal .close');
 
 // When the user clicks on the info icon, open the modal
 infoIcon.addEventListener('click', function() {
-    if (videoContainer.classList.contains('hidden')){
     modal.classList.add('show');
-    } else {
-    videoContainer.classList.add('hidden');
-    modal.classList.add('show');
-    }
 });
 
 // When the user clicks on the close (x), close the modal
 closeModal.addEventListener('click', function() {
-    if (!(videoContainer.classList.contains('hidden'))){
-        modal.classList.remove('show');
-        } else {
-        videoContainer.classList.remove('hidden');
-        modal.classList.remove('show');
-        }
+    modal.classList.remove('show');
 });
 
 // When the user clicks anywhere outside of the modal, close it

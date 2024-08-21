@@ -71,6 +71,7 @@ button {
     caret-color:grey;
 }
 #video-container {
+    z-index: 0;
     position: relative;
     flex-direction: column;
     align-items: center;
